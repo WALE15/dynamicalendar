@@ -1,0 +1,109 @@
+ @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&family=Poppins:ital,wght@0,300;0,400;0,500;1,300&family=Roboto:ital,wght@0,300;0,400;1,100;1,900&display=swap');
+ *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+ }
+body{
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   min-height: 100vh;
+   background: orangered;
+}
+.wrapper{
+    width:450px;
+    background: #fff;
+    border-radius: 10px;
+}
+.wrapper header{
+   display: flex;
+   align-items: center;
+   padding: 25px 30px 10px;
+   justify-content: space-between;
+}
+header .current-date{
+   font-size: 1.45rem;
+   font-weight: 700;
+}
+header .icons span{
+   height: 38px;
+   width: 38px;
+   color: #878787;
+   margin: 0 1px;
+   background: #f2f2f2;
+   line-height: 38px;
+   text-align: center;
+   border-radius: 50%;
+   cursor: pointer;
+   line-height: 38px;
+
+}
+header.icons span:hover{
+   background: #f2f2f2  ;
+}
+header.icons span:last-child{
+    margin-right: -10px;
+}
+.calendar{
+   padding: 20px;
+}
+.calendar ul{
+   display: flex;
+   list-style: none;
+   flex-wrap: wrap;
+   text-align: center;
+}
+.calendar .days{
+   margin-bottom: 20px;
+}
+.calendar .weeks li{
+   font-weight: 500;
+}
+.calendar ul li{
+   position: relative;
+   width: calc(100% / 7);
+}
+.calendar .days li{
+   z-index: 1;
+   cursor:pointer;
+   margin-top: 30px;
+}
+.days li.inactive{
+   color: #aaa;
+}
+ .days li.active{
+   color: #fff;
+ }
+.calendar ul li{
+   position: relative;
+   width:calc(100% /7) ;
+}
+.calendar .days li::before{
+   position: absolute;
+   content: "";
+   height: 40px;
+   width: 40px;
+   top: 50%;
+   left:50% ;
+   z-index: -1;
+   border-radius: 50%;
+   transform: translate(-50%, -50%);
+}
+.days li:hover::before{
+   background: #f2f2f2;
+}
+.days li.active::before{
+   background: orangered;
+}
+h1{
+   
+    font-size: 30px;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: white;
+    font-style: italic;
+    text-align: top;
+    font-weight: 40px;
+    
+}
